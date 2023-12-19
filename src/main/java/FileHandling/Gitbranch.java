@@ -10,7 +10,7 @@ public class Gitbranch {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Gitbranch g = new Gitbranch();
-		g.sub();
+		g.sub1();
 	}
 
 }
