@@ -42,6 +42,18 @@ public class Locators {
 		// e.g :button[id*='u_0_9']
 		// endsswith in css selector - $
 		// e.g :button[id$='u_0_9']
+
+
+		// Xpath
+		// 1 .Basic Xpath - //tagname[@attribute='value']
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("kumar");
+		// 2 .contains - //tagname[contains(@attribute,'partialvalue')]
+		driver.findElement(By.xpath("//input[contains(@class,'input')]")).sendKeys("kumar");
+		// 3 .starts-with - //tagname[starts-with(@attribute,'partialstartingvalue')]
+		driver.findElement(By.xpath("//input[starts-with(@class,'input')]")).sendKeys("kumar");
+		// 4 .AndOr - //tagname[starts-with(@attribute,'partialstartingvalue') and @attribute1='value1']
+		driver.findElement(By.xpath("//input[starts-with(@class,'input') and @id='email']")).sendKeys("kumar");
+
 	}
 
 	public static void main(String[] args) {
