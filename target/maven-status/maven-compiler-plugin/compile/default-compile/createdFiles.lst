@@ -1,1 +1,7 @@
-testing\SeleniumBesant8AM\App.class
+FileHandling\ExcelFileRead.class
+FileHandling\ExcelFileWrite.class
+FileHandling\TextfileRead.class
+FileHandling\gitconecpts.class
+FileHandling\Gitbranch.class
+FileHandling\TextFileWrite.class
+FileHandling\PropertyFile.class
