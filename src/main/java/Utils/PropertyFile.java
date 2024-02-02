@@ -1,4 +1,4 @@
-package FileHandling;
+package Utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -7,15 +7,16 @@ import java.util.Properties;
 
 public class PropertyFile {
 
-	String filepath = "C:\\Users\\sathishkumar\\eclipse-workspace\\SeleniumBesant8AM\\Input\\TestData.properties";
+	static String filepath = System.getProperty("user.dir")+"\\Environment\\env.properties";
 
-	public void GetProperty() throws IOException
+	public static Properties GetProperty() throws IOException
 	{
 		File f = new File(filepath);
 		FileInputStream Fs = new FileInputStream(f);
 		Properties p = new Properties();
 		p.load(Fs);
-		System.out.println(p.getProperty("username"));
+		return p;
+		/*System.out.println(p.getProperty("username"));
 		System.out.println(p.getProperty("password"));
 
 		System.out.println(p.getProperty("dob"));
@@ -26,13 +27,7 @@ public class PropertyFile {
 
 		System.out.println(p.getProperty("address"));
 
-
-	}
-
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		PropertyFile P = new PropertyFile();
-		P.GetProperty();
+		 */
 	}
 
 }

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class TestNgFirstclass {
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun=true)
 	public void beforesuite()
 	{
 		System.out.println("Beforesuite");
@@ -53,16 +53,23 @@ public class TestNgFirstclass {
 		System.out.println("afterMethod");
 	}
 
-	@Test
+	@Test(priority=-1,enabled=true,invocationCount=5,invocationTimeOut=60,dependsOnMethods="testcase2",groups="Sanity")
 	public void testcase1()
 	{
 
 		System.out.println("First Testcase");
 	}
 
-	@Test
-	public void testcase2()
+	@Test(priority=0,timeOut=60,groups={"Sanity","SIT"})
+	public void testcase2() throws InterruptedException
 	{
 		System.out.println("second Testcase");
+		Thread.sleep(7000);
+	}
+
+	@Test(priority=0,timeOut=60,groups="SIT")
+	public void testcase4() throws InterruptedException
+	{
+		System.out.println("fourth Testcase");
 	}
 }

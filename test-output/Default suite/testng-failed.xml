@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNgBasics.TestNgFirstclass">
+      <class name="Testcase.MakeMyTripSearch">
         <methods>
-          <include name="beforemethod"/>
-          <include name="testcase1"/>
+          <include name="ValidSearch"/>
+          <include name="lauchBrowser"/>
+          <include name="teardown"/>
+          <include name="EnterUrlAndMaximize"/>
         </methods>
-      </class> <!-- TestNgBasics.TestNgFirstclass -->
+      </class> <!-- Testcase.MakeMyTripSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class TestNgSecondClass {
 
-	@Test
+	@Test(groups="Sanity")
 	public void testcase3()
 	{
 		System.out.println("third Testcase");
