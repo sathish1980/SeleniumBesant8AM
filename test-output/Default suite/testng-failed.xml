@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcase.MakeMyTripSearch">
+      <class name="Testcase.MakeMyTripSearchPOM">
         <methods>
           <include name="ValidSearch"/>
+          <include name="EnterUrlAndMaximize"/>
           <include name="lauchBrowser"/>
           <include name="teardown"/>
-          <include name="EnterUrlAndMaximize"/>
         </methods>
-      </class> <!-- Testcase.MakeMyTripSearch -->
+      </class> <!-- Testcase.MakeMyTripSearchPOM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
