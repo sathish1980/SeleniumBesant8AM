@@ -207,4 +207,22 @@ public class CommonElements {
 		return Destinationfile.toString();
 	}
 
+	public void WaitForAdsAndclickIntoIt(WebDriver driver)
+	{
+		try
+		{
+			//WaitForFrameandSwitchintTO(driver, "webklipper-publisher-widget-container-notification-frame");
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(60));
+			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("webklipper-publisher-widget-container-notification-frame"));
+
+			//driver.switchTo().frame("webklipper-publisher-widget-container-notification-frame");
+			ClickOnButton(driver.findElement(By.xpath("//a[@class='close']")));
+			//.click();
+			driver.switchTo().defaultContent();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
 }

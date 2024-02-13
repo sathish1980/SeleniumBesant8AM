@@ -5,16 +5,31 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import ElementUtils.CommonElements;
 
 public class SearchPage  extends CommonElements{
 
 	WebDriver driver;
+	@FindBy (xpath="//*[@for='fromCity']")
+	WebElement from;
+	@FindBy (xpath="//*[@for='toCity']")
+	WebElement to;
+	@FindBy (xpath="//*[@data-cy='submit']//a")
+	WebElement button;
+	@FindBy (xpath="//*[@data-cy='sameCityError']")
+	WebElement error;
+	@FindBy (xpath="//input[@id='fromCity']")
+	WebElement fromLocation;
+	@FindBy (xpath="//input[@id='toCity']")
+	WebElement toLocation;
 
 	public SearchPage(WebDriver driver)
 	{
 		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 
 	public void ClickOnFromLocation()
@@ -22,7 +37,7 @@ public class SearchPage  extends CommonElements{
 		WaitForElementToBeClickable(driver,By.xpath("//*[@for='fromCity']"),60);
 
 		// Select From location
-		WebElement from = driver.findElement(By.xpath("//*[@for='fromCity']"));
+		//WebElement from = driver.findElement(By.xpath("//*[@for='fromCity']"));
 		ClickOnButton(from);
 
 	}
@@ -32,8 +47,8 @@ public class SearchPage  extends CommonElements{
 		WaitForElementToBeClickable(driver,By.xpath("//*[@for='toCity']"),60);
 
 		// Select From location
-		WebElement from = driver.findElement(By.xpath("//*[@for='toCity']"));
-		ClickOnButton(from);
+		//WebElement to = driver.findElement(By.xpath("//*[@for='toCity']"));
+		ClickOnButton(to);
 
 	}
 
@@ -82,14 +97,14 @@ public class SearchPage  extends CommonElements{
 
 	public void ClickOnSearchButton()
 	{
-		WebElement button = driver.findElement(By.xpath("//*[@data-cy='submit']//a"));
+		//WebElement button = driver.findElement(By.xpath("//*[@data-cy='submit']//a"));
 		ClickOnButton(button);
 
 	}
 
 	public String GetFromLocation()
 	{
-		WebElement fromLocation = driver.findElement(By.xpath("//input[@id='fromCity']"));
+		//WebElement fromLocation = driver.findElement(By.xpath("//input[@id='fromCity']"));
 		return GetAttributeOfelement(fromLocation,"value");
 		//.getAttribute("value");
 
@@ -97,7 +112,7 @@ public class SearchPage  extends CommonElements{
 
 	public String GetToLocation()
 	{
-		WebElement toLocation = driver.findElement(By.xpath("//input[@id='toCity']"));
+		//WebElement toLocation = driver.findElement(By.xpath("//input[@id='toCity']"));
 		return GetAttributeOfelement(toLocation,"value");
 
 		//.getAttribute("value");
@@ -113,7 +128,7 @@ public class SearchPage  extends CommonElements{
 
 	public String RetriveAnSameCityError()
 	{
-		WebElement error =driver.findElement(By.xpath("//*[@data-cy='sameCityError']"));
+		//WebElement error =driver.findElement(By.xpath("//*[@data-cy='sameCityError']"));
 		return GetTextOfelement(error);
 	}
 

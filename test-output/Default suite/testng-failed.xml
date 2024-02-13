@@ -5,7 +5,9 @@
     <classes>
       <class name="Testcase.MakeMyTripSearchPOM">
         <methods>
-          <include name="ValidSearch"/>
+          <include name="ValidatesameCityError"/>
+          <include name="Report"/>
+          <include name="Report"/>
           <include name="EnterUrlAndMaximize"/>
           <include name="lauchBrowser"/>
           <include name="teardown"/>

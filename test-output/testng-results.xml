@@ -1,29 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-07T09:56:55 IST" name="Default suite" finished-at="2024-02-07T09:57:42 IST" duration-ms="47061">
+  <suite started-at="2024-02-13T10:11:26 IST" name="Default suite" finished-at="2024-02-13T10:11:49 IST" duration-ms="23701">
     <groups>
     </groups>
-    <test started-at="2024-02-07T09:56:55 IST" name="Default test" finished-at="2024-02-07T09:57:42 IST" duration-ms="47061">
+    <test started-at="2024-02-13T10:11:26 IST" name="Default test" finished-at="2024-02-13T10:11:49 IST" duration-ms="23701">
       <class name="Testcase.MakeMyTripSearchPOM">
-        <test-method is-config="true" signature="lauchBrowser()[pri:0, instance:Testcase.MakeMyTripSearchPOM@639c2c1d]" started-at="2024-02-07T09:56:53 IST" name="lauchBrowser" finished-at="2024-02-07T09:56:55 IST" duration-ms="1863" status="PASS">
+        <test-method is-config="true" signature="lauchBrowser()[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:23 IST" name="lauchBrowser" finished-at="2024-02-13T10:11:26 IST" duration-ms="2871" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchBrowser -->
-        <test-method is-config="true" signature="EnterUrlAndMaximize()[pri:0, instance:Testcase.MakeMyTripSearchPOM@639c2c1d]" started-at="2024-02-07T09:56:55 IST" name="EnterUrlAndMaximize" finished-at="2024-02-07T09:56:55 IST" duration-ms="963" status="PASS">
+        <test-method is-config="true" signature="EnterUrlAndMaximize()[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:26 IST" name="EnterUrlAndMaximize" finished-at="2024-02-13T10:11:28 IST" duration-ms="2204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnterUrlAndMaximize -->
-        <test-method signature="ValidSearch()[pri:0, instance:Testcase.MakeMyTripSearchPOM@639c2c1d]" started-at="2024-02-07T09:56:55 IST" name="ValidSearch" finished-at="2024-02-07T09:57:40 IST" duration-ms="44862" status="PASS">
+        <test-method is-config="true" signature="Report(java.lang.reflect.Method)[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:28 IST" name="Report" finished-at="2024-02-13T10:11:28 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Testcase.MakeMyTripSearchPOM.ValidSearch()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+        <test-method signature="ValidSearch()[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:28 IST" name="ValidSearch" finished-at="2024-02-13T10:11:48 IST" duration-ms="20209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidSearch -->
-        <test-method signature="ValidatesameCityError()[pri:1, instance:Testcase.MakeMyTripSearchPOM@639c2c1d]" started-at="2024-02-07T09:57:40 IST" name="ValidatesameCityError" finished-at="2024-02-07T09:57:42 IST" duration-ms="1200" status="PASS">
+        <test-method is-config="true" signature="Report(org.testng.ITestResult)[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:48 IST" name="Report" finished-at="2024-02-13T10:11:48 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidSearch status=SUCCESS method=MakeMyTripSearchPOM.ValidSearch()[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+        <test-method is-config="true" signature="Report(java.lang.reflect.Method)[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:48 IST" name="Report" finished-at="2024-02-13T10:11:48 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Testcase.MakeMyTripSearchPOM.ValidatesameCityError()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+        <test-method signature="ValidatesameCityError()[pri:1, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:48 IST" name="ValidatesameCityError" finished-at="2024-02-13T10:11:49 IST" duration-ms="1213" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@data-cy='sameCityError']"}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b226c0d069c941acfbac8876c87da96b, findElement {using=xpath, value=//*[@data-cy='sameCityError']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\sathishkumar\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63368}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63368/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b226c0d069c941acfbac8876c87da96b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@data-cy='sameCityError']"}
+  (Session info: chrome=121.0.6167.161)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b226c0d069c941acfbac8876c87da96b, findElement {using=xpath, value=//*[@data-cy='sameCityError']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.161, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\sathishkumar\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63368}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63368/devtoo..., se:cdpVersion: 121.0.6167.161, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b226c0d069c941acfbac8876c87da96b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at ElementUtils.CommonElements.GetTextOfelement(CommonElements.java:134)
+at Pages.SearchPage.RetriveAnSameCityError(SearchPage.java:132)
+at Testcase.MakeMyTripSearchPOM.ValidatesameCityError(MakeMyTripSearchPOM.java:105)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatesameCityError -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcase.MakeMyTripSearchPOM@639c2c1d]" started-at="2024-02-07T09:57:42 IST" name="teardown" finished-at="2024-02-07T09:57:42 IST" duration-ms="284" status="PASS">
+        <test-method is-config="true" signature="Report(org.testng.ITestResult)[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:49 IST" name="Report" finished-at="2024-02-13T10:11:49 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatesameCityError status=FAILURE method=MakeMyTripSearchPOM.ValidatesameCityError()[pri:1, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Report -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Testcase.MakeMyTripSearchPOM@7c7a06ec]" started-at="2024-02-13T10:11:50 IST" name="teardown" finished-at="2024-02-13T10:11:50 IST" duration-ms="775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

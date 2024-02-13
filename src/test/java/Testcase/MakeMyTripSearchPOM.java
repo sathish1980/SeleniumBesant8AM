@@ -1,12 +1,18 @@
 package Testcase;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.LogStatus;
 
 import BrowserDriver.Browserlaunch;
 import Pages.SearchPage;
@@ -28,6 +34,26 @@ public class MakeMyTripSearchPOM extends Browserlaunch {
 		driver.manage().window().maximize();
 	}
 
+	@BeforeMethod
+	public void Report(Method method)
+	{
+		StartReports(method.getName());
+	}
+
+	@AfterMethod
+	public void Report(ITestResult result)
+	{
+		if(result.getStatus()==0)
+		{
+			test.log(LogStatus.FAIL,"Testcase Passed");
+		}
+		else if(result.getStatus()==1)
+		{
+			test.log(LogStatus.PASS,"Testcase Failed");
+		}
+	}
+
+
 	@Test(priority=0)
 	public void ValidSearch()
 	{
@@ -41,6 +67,7 @@ public class MakeMyTripSearchPOM extends Browserlaunch {
 
 		SearchPage sp = new SearchPage(driver);
 		// Select From Location
+		sp.WaitForAdsAndclickIntoIt(driver);
 		sp.ClickOnFromLocation();
 		sp.SelectTheValueFromList("MAA");
 		//Select To Location
@@ -57,6 +84,7 @@ public class MakeMyTripSearchPOM extends Browserlaunch {
 		String actual =srp.GetSearchResultText();
 		Assert.assertEquals(expected, actual);
 		sp.ClickOnBrowserBackButton(driver);
+		test.log(LogStatus.INFO, "Search with Valid Values are mathced");
 	}
 
 
@@ -70,14 +98,19 @@ public class MakeMyTripSearchPOM extends Browserlaunch {
 
 		SearchPage sp = new SearchPage(driver);
 		sp.ClickOnToLocation();
+		test.log(LogStatus.INFO, "Selected to location");
+
 		sp.SelectTheValueFromList("MAA");
+		test.log(LogStatus.INFO, "Selected MAA");
 		Assert.assertEquals(sp.RetriveAnSameCityError(), sp.GetExpectedSameCityError());
+		test.log(LogStatus.INFO, "Search with same city Error is validated");
 
 	}
 	@AfterSuite
 	public void teardown()
 	{
 		driver.quit();
+		closeReport();
 	}
 
 }
