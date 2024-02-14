@@ -21,6 +21,7 @@ import Utils.PropertyFile;
 
 public class MakeMyTripSearchPOM extends Browserlaunch {
 
+	String testCaseName =null;
 	@BeforeSuite
 	public void lauchBrowser() throws IOException
 	{
@@ -38,18 +39,26 @@ public class MakeMyTripSearchPOM extends Browserlaunch {
 	public void Report(Method method)
 	{
 		StartReports(method.getName());
+		testCaseName = method.getName();
 	}
 
 	@AfterMethod
-	public void Report(ITestResult result)
+	public void Report(ITestResult result) throws IOException
 	{
+		SearchPage sp = new SearchPage(driver);
+		String screenShotPath = sp.GetScreenShot(driver,testCaseName);
+
 		if(result.getStatus()==0)
 		{
-			test.log(LogStatus.FAIL,"Testcase Passed");
+
+			test.log(LogStatus.INFO, test.addBase64ScreenShot(screenShotPath));
+			test.log(LogStatus.FAIL,"Testcase Failed");
 		}
 		else if(result.getStatus()==1)
 		{
-			test.log(LogStatus.PASS,"Testcase Failed");
+			test.log(LogStatus.INFO, test.addBase64ScreenShot(screenShotPath));
+
+			test.log(LogStatus.PASS,"Testcase Passed");
 		}
 	}
 

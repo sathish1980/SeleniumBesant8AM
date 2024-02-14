@@ -225,4 +225,14 @@ public class CommonElements {
 			System.out.println(e);
 		}
 	}
+
+
+	public String GetScreenShot(WebDriver driver,String fileName) throws IOException
+	{
+		TakesScreenshot t = (TakesScreenshot)driver;
+		File sourceFile = t.getScreenshotAs(OutputType.FILE);
+		File destinationfile = new File(System.getProperty("user.dir")+"\\Screenshot\\"+fileName+".png");
+		FileUtils.copyFile(sourceFile, destinationfile);
+		return destinationfile.getAbsoluteFile().toString();
+	}
 }
